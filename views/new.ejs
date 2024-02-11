@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            
+            <div class="title">
+                <h1 class="heading"><a href="/" class="headinglink">Blog Articles</a></h1>
+            </div>
+            <div class="navlist">
+                <ul class="navlists">
+                    <li class="navlistitems"><a href="/" class="headinglink">Home</a></li>
+                    <li class="navlistitems"><a href="/about" class="headinglink">About</a></li>
+                    <li class="navlistitems"><input type="text" placeholder="Search" class="search"><img src="/static/images/search.svg" alt="" class="searchimg"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="newarticles">
+            <div class="newarticletitle">
+                <h1 class="newtitle">New Article</h1>
+            </div>
+            <div class="newarticleform">
+                <form action="/article/new/submit" method="POST" class="form">
+                    <label for="">:Title:</label>
+                    <input type="text"  class="formtitle" name="title" id="title">
+                    <label for="">:Description:</label>
+                    <textarea name="description" id="" cols="30" rows="10" class="textarea" name="description" id="description"></textarea>
+                    <label for="">:Markdown:</label>
+                    <textarea name="markdown" id="" cols="30" rows="10" class="textarea" name="markdown" id="markdown"></textarea>
+                    <div class="newarticlebtnform">
+                        <button class="newarticlesbtn">SAVE</button>
+                        <a href="/article/new" class="newarticlesbtn">CLEAR</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+</body>
+</html>

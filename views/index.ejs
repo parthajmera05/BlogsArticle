@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            
+            <div class="title">
+                <h1 class="heading"><a href="/" class="headinglink">Blog Articles</a></h1>
+            </div>
+            <div class="navlist">
+                <ul class="navlists">
+                    <li class="navlistitems"><a href="/" class="headinglink">Home</a></li>
+                    <li class="navlistitems"><a href="/about" class="headinglink">About</a></li>
+                    <li class="navlistitems"><a href="/more" class="headinglink">All Articles</a></li>
+                    <li class="navlistitems"><a href="https://github.com/parthajmera05" class="headinglink" target="_blank">GitHub</a></li>
+                    <li class="navlistitems"><a href="/about" class="headinglink">Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="articles">
+            <div class="articlebox">
+                <% if(articles.length > 0){ %>
+                <% for(let i = Object.keys(articles).length-1 ; i >= Object.keys(articles).length-3 && i>=0 ; i--){ console.log(i); %>
+                     
+                <div class="article">
+                    <div class="articleTitle">
+                        <h2><%= articles[i].title  %></h2> 
+                    </div>
+                    <div class="createdAt">
+                        <%= articles[i].createdAt.toLocaleString() %>
+                    </div>
+                    <div class="articleDescription">
+                        <%= articles[i].markdown %>
+                    </div>
+                    <div class="btns">
+                        <div class="viewbtn newarticlebtn"><a href="/article/view/<%= articles[i].id %>" class="view">View</a></div>
+                        <div class="deletebtn newarticlebtn"><a href="/article/delete/<%= articles[i].id %>" class="delete">Delete</a></div>
+                    </div>
+                </div>
+            <% }} else{ %></div>
+                <div class="noarticle">
+                    <h2>No Articles</h2>
+                </div>
+                
+            <% } %>
+        
+            <div class="addarticle">
+                <a href="/article/new" class="newarticlebtn">New Article</a>
+                <a href="/more" class="newarticlebtn">More Articles</a>
+            </div>
+            
+        </div>
+        
+</body>
+</html>

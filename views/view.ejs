@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            
+            <div class="title">
+                <h1 class="heading"><a href="/" class="headinglink">Blog Articles</a></h1>
+            </div>
+            <div class="navlist">
+                <ul class="navlists">
+                    <li class="navlistitems"><a href="/" class="headinglink">Home</a></li>
+                    <li class="navlistitems"><a href="/about" class="headinglink">About</a></li>
+                    <li class="navlistitems"><a href="/more" class="headinglink">All Articles</a></li>
+                    <li class="navlistitems"><a href="https://github.com/parthajmera05" class="headinglink" target="_blank">GitHub</a></li>
+                    <li class="navlistitems"><a href="/about" class="headinglink">Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="viewarticle">
+            <div class="viewarticletitle">
+                <h1 class="viewtitle"><%= article.title %></h1>
+                <p class="viewdate"><%= article.createdAt.toLocaleString() %></p>
+            </div>
+            <div class="viewarticlebox">
+                <div class="viewarticledesc"><%= article.description %></div>
+            </div>
+        </div>
+        
+        
+</body>
+</html>
